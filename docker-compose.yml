@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  server:
+    container_name: app_server
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/app
+    command: /start-reload.sh
